@@ -1,10 +1,3 @@
-<?php
-include '../koneksi.php';
-	session_start();
-	if($_SESSION['level'] !="produktifrpl"){
-		header("location:../index.php?pesan=belum_login");
-	}
-?>
 <!doctype html>
 <html lang="en">
 <head>

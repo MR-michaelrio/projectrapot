@@ -107,6 +107,48 @@ if($cek > 0){
 		$_SESSION['level'] = "ekonomi";
 		header("location:Ekonomi/index.php");
 	}
+	elseif($data['level']=="adm"){
+
+		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $id;
+		$_SESSION['level'] = "adm";
+		header("location:ADM/index.php");
+	}
+	elseif($data['level']=="ipa"){
+
+		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $id;
+		$_SESSION['level'] = "ipa";
+		header("location:IPA/index.php");
+	}
+	elseif($data['level']=="produktifakl"){
+
+		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $id;
+		$_SESSION['level'] = "produktifakl";
+		header("location:Produktif AKL/index.php");
+	}
+	elseif($data['level']=="produktifotkp"){
+
+		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $id;
+		$_SESSION['level'] = "produktifotkp";
+		header("location:Produktif OTKP/index.php");
+	}
+	elseif($data['level']=="xrpl"){
+
+		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $id;
+		$_SESSION['level'] = "xrpl";
+		header("location:xrpl/index.php");
+	}
+	elseif($data['level']=="xirpl"){
+
+		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $id;
+		$_SESSION['level'] = "xirpl";
+		header("location:xirpl/index.php");
+	}
     else{
 		header("location:index.php?pesan=gagal");
 	}	

@@ -1,3 +1,10 @@
+<?php
+include '../koneksi.php';
+	session_start();
+	if($_SESSION['level'] !="produktifrpl"){
+		header("location:../index.php?pesan=belum_login");
+	}
+?>
 <div id="wrapper">
 <!-- NAVBAR -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -20,7 +27,7 @@
 		<div id="navbar-menu">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span style="text-transform: capitalize;"><?php echo $_SESSION['username']; ?></span><i class="icon-submenu lnr lnr-chevron-down"></i></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span ><?php if($_SESSION['level']="produktifrpl"){echo"Produktif RPL";} ?></span><i class="icon-submenu lnr lnr-chevron-down"></i></a>
 					<ul class="dropdown-menu">
 						<li><a href="../logout.php"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 					</ul>
